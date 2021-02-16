@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ff8_card_manip
@@ -1331,6 +1332,24 @@ namespace ff8_card_manip
         public static int FindIdByName(string name_e)
         {
             return _table.First(x => x.Name_e == name_e).Id;
+        }
+
+        public static string FindNameById(int id)
+        {
+            return _table.First(x => x.Id == id).Name_e;
+        }
+
+        public static IList<int> ListIdsByUrdl(IEnumerable<int> urdl, bool fuzzy = false)
+        {
+            if (fuzzy)
+            {
+                urdl = urdl.OrderBy(x => x);
+            }
+
+            return _table
+                .Where(x => urdl.SequenceEqual(fuzzy ? x.Urdl.OrderBy(y => y).ToArray() : x.Urdl))
+                .Select(x => x.Id)
+                .ToList();
         }
     }
 }

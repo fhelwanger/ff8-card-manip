@@ -12,7 +12,7 @@ namespace ff8_card_manip
         public uint Next()
         {
             State = (State * 0x10dcd + 1) & 0xffff_ffff;
-            return State;
+            return State >> 17;
         }
     }
 }

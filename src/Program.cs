@@ -704,11 +704,6 @@ namespace ff8_card_manip
                 searchType = TSearchType.Counting;
             }
 
-            if (args.Length > 2)
-            {
-                _options.DelayFrame = int.Parse(args[2]);
-            }
-
             if (!silent)
             {
                 Console.WriteLine(msg);

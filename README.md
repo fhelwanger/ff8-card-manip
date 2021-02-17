@@ -31,6 +31,10 @@ Instead of editing the source code directly, the settings can be changed by edit
 }
 ```
 
+## Download
+
+You can get the latest version from the [releases](https://github.com/fhelwanger/ff8-card-manip/releases). Just download the `ff8-card-manip.zip` file and extract it.
+
 ## Build
 
 For development, you need [netcore 3.1](https://dotnet.microsoft.com/download) to build this.

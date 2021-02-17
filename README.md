@@ -8,7 +8,7 @@ I tried to keep the behavior the same so it's already familiar to people.
 
 Instead of editing the source code directly, the settings can be changed by editing the "settings.json" file.
 
-```json
+```js
 {
     "Base": 550, // Base index for search
     "Width": 400, // Search width

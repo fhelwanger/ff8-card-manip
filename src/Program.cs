@@ -8,33 +8,22 @@ namespace ff8_card_manip
 {
     class Program
     {
-        private static Options _options = new Options()
-        {
-            Base = 550,
-            Width = 400,
-            RecoveryWidth = 360,
-            CountingWidth = 100,
-            CountingFrameWidth = 40,
-            EarlyQuistis = "pingval",
-            AutofireSpeed = 12,
-            DelayFrame = 285,
-            RanksOrder = "ulrd",
-            StrongHighlightCards = new[] { 103, 105 },
-            HighlightCards = new[] { 21, 48, 53 },
-            Order = Options.TOrder.Reverse,
-            ConsoleFps = 60,
-            Player = "zellmama",
-            Fuzzy = new[] { ".", "r", "o", "ro" },
-            ForcedIncr = 10,
-            AcceptDelayFrame = 3,
-            Prompt = "> "
-        };
-
         private static string[] _args;
+        private static Options _options;
 
         static void Main(string[] args)
         {
             _args = args;
+
+            try
+            {
+                _options = Options.ParseFromFile("settings.json");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(Translate.Get("settings_error"));
+                return;
+            }
 
             if (args.Length == 0)
             {

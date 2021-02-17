@@ -11,6 +11,7 @@ namespace ff8_card_manip
         {
             var filename = Process.GetCurrentProcess().ProcessName;
 
+            _expressions.Add("settings_error", "Error when reading \"settings.json\".");
             _expressions.Add("pattern2str_fmt", "Initiative: {0}\nDeck: {1}");
             _expressions.Add("no_target", "There is no target.");
 

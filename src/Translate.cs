@@ -15,6 +15,9 @@ namespace ff8_card_manip
             _expressions.Add("pattern2str_fmt", "Initiative: {0}\nDeck: {1}");
             _expressions.Add("no_target", "There is no target.");
 
+            _expressions.Add("prompt_args.first", "Enter 1 for Elastoid, 2 for Malboro, 3 for Biggs&Wedge or the RNG state in hexadecimal:");
+            _expressions.Add("prompt_args.second", "Enter the RNG counter (optional):");
+
             _expressions.Add("prompt.rare_search", "Enter:start Rare Card Timer (h:Help, q:Quit, else:Recovery Search):");
             _expressions.Add("prompt.after_normal_search", "Enter:start Rare Card Timer (h:Help, q:Quit, else:change Pattern for Search):");
             _expressions.Add("prompt.second_game_method", "Please hit \"Play\" with turbo button\nand input the opening situation of the 1st game (h:Help, q:Quit):");

@@ -27,7 +27,8 @@ Instead of editing the source code directly, the settings can be changed by edit
     "Fuzzy": [ ".", "r", "o", "ro" ], // If do fuzzy search do find cards (r = input ranks, o = opening hands)
     "ForcedIncr": 10, // Number of RNG additions when "Play" is selected
     "AcceptDelayFrame": 3, // Number of frames after selecting "Play" that RNG additions stop
-    "Prompt": "> " // The prompt string to display
+    "Prompt": "> ", // The prompt string to display
+    "Interactive": false // If should prompt for parameters in case they're not supplied
 }
 ```
 

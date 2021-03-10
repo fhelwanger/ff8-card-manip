@@ -25,13 +25,20 @@ namespace ff8_card_manip
                 return;
             }
 
-            if (args.Length == 0)
+            if (_args.Length == 0)
             {
-                ShowHelp();
-                return;
+                if (_options.Interactive)
+                {
+                    _args = PromptArgs();
+                }
+                else
+                {
+                    ShowHelp();
+                    return;
+                }
             }
 
-            var (firstState, state, count, searchType) = ReadArgs(args);
+            var (firstState, state, count, searchType) = ReadArgs(_args);
             var player = PlayerTable.Get(_options.Player);
 
             if (searchType == TSearchType.First)
@@ -779,6 +786,22 @@ namespace ff8_card_manip
         static void ShowPatternHelp()
         {
             Console.WriteLine(Translate.Get("help.pattern"));
+        }
+
+        static string[] PromptArgs()
+        {
+            Console.WriteLine(Translate.Get("prompt_args.first"));
+            var first = Prompt();
+            Console.WriteLine(Translate.Get("prompt_args.second"));
+            var second = Prompt();
+            Console.WriteLine();
+
+            if (string.IsNullOrWhiteSpace(second))
+            {
+                return new string[] { first };
+            }
+
+            return new string[] { first, second };
         }
 
         static string Prompt()

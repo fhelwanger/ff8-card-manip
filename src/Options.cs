@@ -23,6 +23,7 @@ namespace ff8_card_manip
         public uint ForcedIncr { get; set; } = 10;
         public int AcceptDelayFrame { get; set; } = 3;
         public string Prompt { get; set; } = "> ";
+        public bool Interactive { get; set; } = false;
 
         public enum TOrder
         {

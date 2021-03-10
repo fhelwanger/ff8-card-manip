@@ -16,5 +16,6 @@
     "Fuzzy": [ ".", "r", "o", "ro" ],
     "ForcedIncr": 10,
     "AcceptDelayFrame": 3,
-    "Prompt": "> "
+    "Prompt": "> ",
+    "Interactive": false
 }

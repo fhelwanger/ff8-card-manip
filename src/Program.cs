@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -17,7 +18,8 @@ namespace ff8_card_manip
 
             try
             {
-                _options = Options.ParseFromFile("settings.json");
+                var settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.json");
+                _options = Options.ParseFromFile(settingsPath);
             }
             catch (Exception)
             {

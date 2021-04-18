@@ -17,5 +17,6 @@
     "ForcedIncr": 10,
     "AcceptDelayFrame": 3,
     "Prompt": "> ",
-    "Interactive": false
+    "Interactive": false,
+    "Win7": false
 }

@@ -28,7 +28,8 @@ Instead of editing the source code directly, the settings can be changed by edit
     "ForcedIncr": 10, // Number of RNG additions when "Play" is selected
     "AcceptDelayFrame": 3, // Number of frames after selecting "Play" that RNG additions stop
     "Prompt": "> ", // The prompt string to display
-    "Interactive": false // If should prompt for parameters in case they're not supplied
+    "Interactive": false, // If should prompt for parameters in case they're not supplied
+    "Win7": false // If should apply some settings to work better on Win7
 }
 ```
 

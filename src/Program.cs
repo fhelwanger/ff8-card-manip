@@ -234,7 +234,8 @@ namespace ff8_card_manip
                 var duration = DateTime.Now.SecondsSinceEpoch() - start;
 
                 incr = (uint)Math.Max(
-                    Math.Round((duration - incrStart) * 60),
+                    // jester reported that it works better as 63 on Win7
+                    Math.Round((duration - incrStart) * (_options.Win7 ? 63 : 60)),
                     _options.ForcedIncr + _options.AcceptDelayFrame
                 );
 

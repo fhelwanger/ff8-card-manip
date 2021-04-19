@@ -24,7 +24,7 @@ namespace ff8_card_manip
         public int AcceptDelayFrame { get; set; } = 3;
         public string Prompt { get; set; } = "> ";
         public bool Interactive { get; set; } = false;
-        public bool Win7 { get; set; } = false;
+        public float GameFps { get; set; } = 60;
 
         public enum TOrder
         {

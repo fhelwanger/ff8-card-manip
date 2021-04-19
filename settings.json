@@ -18,5 +18,5 @@
     "AcceptDelayFrame": 3,
     "Prompt": "> ",
     "Interactive": false,
-    "Win7": false
+    "GameFps": 60
 }

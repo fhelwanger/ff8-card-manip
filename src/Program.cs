@@ -218,10 +218,10 @@ namespace ff8_card_manip
             var fps = _options.ConsoleFps;
 
             var start = DateTime.Now.SecondsSinceEpoch();
-            var delay = _options.DelayFrame / 60f;
+            var delay = _options.DelayFrame / _options.GameFps;
 
             var incr = 0U;
-            var incrStart = delay - (_options.ForcedIncr / 60f);
+            var incrStart = delay - (_options.ForcedIncr / _options.GameFps);
             var timerWidth = 8;
             var width = Math.Min(Console.WindowWidth - 1 - timerWidth, 60);
 
@@ -234,8 +234,7 @@ namespace ff8_card_manip
                 var duration = DateTime.Now.SecondsSinceEpoch() - start;
 
                 incr = (uint)Math.Max(
-                    // jester reported that it works better as 63 on Win7
-                    Math.Round((duration - incrStart) * (_options.Win7 ? 63 : 60)),
+                    Math.Round((duration - incrStart) * _options.GameFps),
                     _options.ForcedIncr + _options.AcceptDelayFrame
                 );
 

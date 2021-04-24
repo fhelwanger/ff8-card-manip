@@ -12,7 +12,7 @@ namespace ff8_card_manip
         public uint CountingFrameWidth { get; set; } = 40;
         public string EarlyQuistis { get; set; } = "pingval";
         public int AutofireSpeed { get; set; } = 12;
-        public int DelayFrame { get; set; } = 285;
+        public float DelayFrame { get; set; } = 285;
         public string RanksOrder { get; set; } = "ulrd";
         public int[] StrongHighlightCards { get; set; } = new[] { 103, 105 };
         public int[] HighlightCards { get; set; } = new[] { 21, 48, 53 };
@@ -21,7 +21,7 @@ namespace ff8_card_manip
         public string Player { get; set; } = "zellmama";
         public string[] Fuzzy { get; set; } = new[] { ".", "r", "o", "ro" };
         public uint ForcedIncr { get; set; } = 10;
-        public int AcceptDelayFrame { get; set; } = 3;
+        public float AcceptDelayFrame { get; set; } = 3;
         public string Prompt { get; set; } = "> ";
         public bool Interactive { get; set; } = false;
         public float GameFps { get; set; } = 60;
